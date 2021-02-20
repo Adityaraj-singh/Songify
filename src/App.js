@@ -14,7 +14,7 @@ function App() {
  
 
     return (
-      <div className="app bg-green-400">
+      <div className="app ">
      <Home/>
      </div>
     )
