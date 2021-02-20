@@ -120,7 +120,7 @@ useEffect(()=>{
            <div  className="home">
             <Container>
             <Row className="justify-content-md-center">
-            <Col  xs={{ order: 1 }} sm={3}  >
+            <Col  sm={3}  >
             <Songlist 
             songs={songs}
              Setcurrentsongindex={Setcurrentsongindex}
