@@ -233,11 +233,11 @@ return(
                 <div className="next-song" style={playerstyle}>
                     <h2 className="text-md" ><strong>Next up:</strong>{songs[nextsongindex].title}</h2>
                 </div>
-              
-            </div> 
-            <div className="trademark">
+                <div className="trademark">
                 <p>a deadshot production</p>
             </div>
+            </div> 
+            
             </center>
        
         </div>
