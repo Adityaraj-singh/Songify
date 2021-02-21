@@ -15,6 +15,12 @@ var current={
 
 const temp_songs=songs
 
+const [main_player,Setmain_player]=useState({
+    position: 'relative',
+    top:'-590px'
+   
+})
+
 const [playerstyle,Setplayerstyle]=useState({
     visibility:'visible'
 })
@@ -34,6 +40,8 @@ const [playergeometry,Setplayergeometry]=useState({
     height: '630px'
   
 })
+
+
 
 const audioEl=useRef(0)
 const [initialtime,Setinitialtime]=useState(0)
@@ -98,7 +106,9 @@ const minimize=()=>{
 
     Setplayergeometry({
         width: '350px',
-        height: '100px'
+        height: '100px',
+        
+       
     })
 
     Setcontrolstyle({
@@ -116,6 +126,12 @@ const minimize=()=>{
    'font-size':'small',
     width: '350px'
     })
+
+Setmain_player({
+    position:'relative',
+    top:'-60px'
+})
+
    Setminplayer(!minplayer)
 }
 const maximize=()=>{
@@ -138,8 +154,14 @@ const maximize=()=>{
     Settitlestyle({
         position: 'relative',
     })
+
+    Setmain_player({
+        position: 'relative',
+    top:'-590px'
+    })
     Setminplayer(!minplayer)
 }
+
 
 useEffect(()=>{
 
@@ -194,7 +216,7 @@ const skip=(forwards=true)=>{
 
 return(
   
-    <div className="main-player items-center">
+    <div className="main-player items-center" style={main_player}>
                              <center>
                                 
                     <div className="player-box   bg-gradient-to-r from-purple-600 via-purple-400 to-purple-400 rounded-2xl space-y-2 ring-4 ring-indigo-900 shadow-2xl" id="playerbox" style={playergeometry}>

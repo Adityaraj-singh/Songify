@@ -51,19 +51,20 @@ function filter(){
     />
             </div>
                  
-            <ListGroup className=" listing py-4 px-2 space-y-1 " as="ol">
+            <ol className=" listing py-4 px-2 space-y-1 " as="ol">
                 {
                     temp_songs.map(item=>(
-                        <button className="rounded-2xl" key={item.id}   onClick={()=>change(item.id)}><ListGroup.Item  key={item.id}  as="li" >
+                        <li id="listitem" key={item.id}>
+                        <button className="rounded-2xl" key={item.id}   onClick={()=>change(item.id)}>
                         <strong>{item.title}</strong>
                         <div className="align-item-start">{item.artist}</div>
-                    </ListGroup.Item>
                     </button>
+                    </li>
                     ))
                 }
             
 
-    </ListGroup>
+    </ol>
     
             </div>
             </center>
