@@ -42,7 +42,7 @@ width:auto;
 }
 .song-list-box{
    width: 450;
-   height: 610px;
+   height: 540px;
 
 }
 
@@ -53,7 +53,7 @@ width:auto;
 .listing{
   border-radius: 50px;
  
-   height: 540px;
+   height: 450px;
    overflow: scroll;
    overflow-x: hidden;
   position: relative;
@@ -68,13 +68,13 @@ width:auto;
 }
 .next-song{
    position: relative;
-   top: 100px;
+   top: 50px;
 }
 
 #listitem{
    height:auto;
    background-color: aqua;   
-   box-shadow: black 3px 3px;
+   box-shadow: black 2px 5px;
    width: 300px;
    margin-bottom: 10px;
    background-color: white;

@@ -17,7 +17,7 @@ const temp_songs=songs
 
 const [main_player,Setmain_player]=useState({
     position: 'relative',
-    top:'-590px'
+    top:'-500px'
    
 })
 
@@ -26,7 +26,7 @@ const [playerstyle,Setplayerstyle]=useState({
 })
 const [controlstyle,Setcontrolstyle]=useState({
     position:'relative',
-    top:'100px'
+    top:'40px'
    
 })
 
@@ -37,7 +37,7 @@ const [titlestyle,Settitlestyle]=useState({
 })
 const [playergeometry,Setplayergeometry]=useState({
     width: '350px',
-    height: '630px'
+    height: '550px'
   
 })
 

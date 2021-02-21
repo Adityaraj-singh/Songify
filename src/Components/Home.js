@@ -67,7 +67,7 @@ function Home(){
         src:'/Media/rap god.mp3'
     },
     {    id:9,
-        title:'Shell Shocked(Teenage mutatnt ninja turtle)',
+        title:'Shell Shocked(Ninja turtle)',
         artist:'Juicy J, Wiz Khalifa, Ty Dolla $ign',
         photo:'/Media/Thumbnails/shell_shocked.jfif',
         src:'/Media/Shell shocked(Teenaje mutant and ninja turtles).mp3'
