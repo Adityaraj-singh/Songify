@@ -39,6 +39,11 @@ function filter(){
     
 }
 
+function playall(){
+    Setcurrentsongindex(0)
+    Setplaying(true)
+}
+
     return(
 
         <div className="songlistbox">
@@ -53,13 +58,15 @@ function filter(){
       onChange={filter}
     />
             </div>
-                 
-            <ol className=" listing py-4  space-y-2 " as="ol">
+                 <div className="headerbutton">
+                     <button className="bg-green-500 p-1 rounded-xl shadow-md border-2 border-black" id="playall" onClick={playall}>PLAY ALL</button>
+                 </div>
+            <ol className=" listing py-4  space-y-1 " as="ol">
                 {
                     temp_songs.map(item=>(
-                        <li className={currentsongindex==item.id ? "bg-green-400" : ""} id="listitem" key={item.id}>
-                            <div className="" id="playing-icon">{currentsongindex==item.id ? <BsMusicNoteBeamed />:null}</div>
-                        <button className=" rounded-2xl space-y-2" key={item.id}   onClick={()=>change(item.id)}>             
+                        <li className={currentsongindex==item.id ? "bg-green-600" : "bg-white"} id="listitem" key={item.id}>
+                            <div  id="playing-icon">{currentsongindex==item.id ? <BsMusicNoteBeamed />:null}</div>
+                        <button className=" rounded-2xl space-y-1" key={item.id}   onClick={()=>change(item.id)}>             
                         <p ><strong>{item.title}</strong> </p>
                         
                         <div className="align-item-start">{item.artist}</div>

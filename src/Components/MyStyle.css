@@ -12,6 +12,10 @@ width:auto;
 .player-heading{
    margin-bottom: 30px;
 }
+.song-artist{
+   position: relative;
+   top: 5px;
+}
 .detail-image{ 
    width: 180px;
    height: 180px;
@@ -20,7 +24,7 @@ width:auto;
    object-fit:cover;
    background-size:100% 100%;
    margin-bottom: 50px;
-    box-shadow: 5px 5px 12px black;
+    box-shadow: 6px 8px 12px black;
 }
 
 .main-player{
@@ -49,10 +53,13 @@ width:auto;
    margin-bottom: 20px;
 }
 
-.listing{
-  border-radius: 50px;
-  
-   height: 450px;
+.playingicon{
+   position: relative;
+   top: 1px;
+}
+
+.listing{ 
+   height: 440px;
    overflow: scroll;
    overflow-x: hidden;
   position: relative;
@@ -73,26 +80,64 @@ width:auto;
 #listitem{
    min-height:70px;
      
-   box-shadow: black 2px 5px;
+   box-shadow: black 2px 5px 10px;
    width: 300px;
    margin-bottom: 10px;
    
    border-radius: 7px;
 }
 
-button{
-   outline:none;
-   background-color: brown;
-}
+
 #playing-icon{
    position: relative;
    right: 130px;
    top: 30px;
 }
 
-.progresser_container{
+.progress_div{
+
    width:100%;
-   height: auto;
-   padding:1rem 0;
-   margin-top: 1rem;
+   height: 0.5rem;
+   box-shadow: 0 1px 2px rgba(0, 0,0, 0.7),0 2px 4px rgba(0, 0,0, 0.7);
+   background-color: blanchedalmond;
+   border-radius: 4rem;
+   position: relative;
+   margin-top: 0.5rem;
+   transition: all 1s linear;
+   -moz-transition: all 1s linear;
+   -o-transition: all 1s linear;
+   -webkit-transition: all 1s linear;
+   cursor: pointer;
+   -webkit-appearance: none;
+   appearance: none;
+}
+
+.progresses{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 0;
+   height: 100%;
+   background-color: black;
+  border-top-left-radius: 4 rem;
+   /*
+  
+   transition: width 0s linear;
+   -moz-transition: width 0s linear;
+   -o-transition: width 0s linear;
+   -webkit-transition: width 0s linear;
+   */
+   cursor: pointer;
+   -webkit-appearance: none;
+   appearance: none;
+
+}
+
+.trademark{
+   position: relative;
+   top: 60px;
+}
+
+#playall{
+   box-shadow: 2px 2px 8px black;
 }
