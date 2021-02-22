@@ -201,6 +201,7 @@ const skip=(forwards=true)=>{
                 return temp
          })
          document.getElementById('progresses').style.width='0%'
+         audioEl.current.currentTime=0
      }
 
      
