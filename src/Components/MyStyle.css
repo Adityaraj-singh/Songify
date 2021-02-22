@@ -20,6 +20,7 @@ width:auto;
    object-fit:cover;
    background-size:100% 100%;
    margin-bottom: 50px;
+    box-shadow: 5px 5px 12px black;
 }
 
 .main-player{
@@ -37,22 +38,20 @@ width:auto;
 
   width: 350px;
   position: relative;
-  
   top: 40px;
 }
 .song-list-box{
    width: 450;
    height: 540px;
-
 }
 
 .home-title{
    margin-bottom: 20px;
-   
 }
+
 .listing{
   border-radius: 50px;
- 
+  
    height: 450px;
    overflow: scroll;
    overflow-x: hidden;
@@ -72,11 +71,28 @@ width:auto;
 }
 
 #listitem{
-   height:auto;
-   background-color: aqua;   
+   min-height:70px;
+     
    box-shadow: black 2px 5px;
    width: 300px;
    margin-bottom: 10px;
-   background-color: white;
-   border-radius: 20px;
+   
+   border-radius: 7px;
+}
+
+button{
+   outline:none;
+   background-color: brown;
+}
+#playing-icon{
+   position: relative;
+   right: 130px;
+   top: 30px;
+}
+
+.progresser_container{
+   width:100%;
+   height: auto;
+   padding:1rem 0;
+   margin-top: 1rem;
 }

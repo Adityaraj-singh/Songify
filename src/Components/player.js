@@ -4,7 +4,7 @@ import {Nav,Form,Row,Col} from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BiSkipPrevious,BiPlay,BiSkipNext,BiPause } from 'react-icons/bi';
 import {AiOutlineShrink} from 'react-icons/ai'
-import {FiMaximize2} from 'react-icons/fi'
+import {BsArrowsExpand} from 'react-icons/bs'
 import {Container,ProgressBar} from 'react-bootstrap'
 function Player({songs,currentsongindex,Setcurrentsongindex,nextsongindex,Setnextsongindex,playing,Setplaying,minplayer,Setminplayer}){
     const [showing,Setshowing]=useState('visible')
@@ -23,7 +23,7 @@ const [main_player,Setmain_player]=useState({
 
 const [playerstyle,Setplayerstyle]=useState({
     visibility:'visible'
-})
+}) 
 const [controlstyle,Setcontrolstyle]=useState({
     position:'relative',
     top:'40px'
@@ -143,7 +143,7 @@ const maximize=()=>{
 
     Setplayergeometry({
         width: '350px',
-        height: '630px'
+        height: '550px'
     })
 
     Setcontrolstyle({
@@ -157,7 +157,7 @@ const maximize=()=>{
 
     Setmain_player({
         position: 'relative',
-    top:'-590px'
+        top:'-500px'
     })
     Setminplayer(!minplayer)
 }
@@ -221,13 +221,13 @@ return(
                                 
                     <div className="player-box   bg-gradient-to-r from-purple-600 via-purple-400 to-purple-400 rounded-2xl space-y-2 ring-4 ring-indigo-900 shadow-2xl" id="playerbox" style={playergeometry}>
                         <div className="top-controls p-1">
-                        {!minplayer ? <button onClick={minimize}><AiOutlineShrink size={20}/></button> : <button onClick={maximize}><FiMaximize2 size={20}/></button> }
+                        {!minplayer ? <button onClick={minimize}><AiOutlineShrink size={20}/></button> : <button className="rounded-sm" onClick={maximize} ><BsArrowsExpand size={20} /></button> }
                         </div>
                     <div className="player-heading" style={playerstyle}>
                         <audio id="audio" src={process.env.PUBLIC_URL+songs[currentsongindex].src}  ref={audioEl} preload="auto"/>                       
                    <h1 className="font-extralight text-3xl"> PLAYING NOW</h1>
                    </div>
-                   <div className="detail-image shadow-2xl border-3 ring-4 ring-opacity-70 ring-purple-400" style={current} >
+                   <div className="detail-image" style={current} >
                    </div>
                    <center>
                    <div className="song-title" style={titlestyle}>
@@ -237,24 +237,27 @@ return(
                     <div className="song-artist" style={playerstyle}>
                         <h4 className="font-bold">{songs[currentsongindex].artist}</h4>
                     </div>
-                   <div className="progress-bars p-2" style={playerstyle}>
+                   <div className="progress-bars p-1" style={playerstyle}>
                    <Row>
                             <Col xs={2}>{initialtime}</Col>
-                            <Col xs={8}><Form.Control type="range" ref={rangevalue} custom min="0" max={audioEl.current.duration} value={initialtime} /></Col>
+                            <Col xs={8}><Form.Control type="range" ref={rangevalue} custom min="0" max={audioEl.current.duration}/></Col>
                             <Col xs={2}>{finaltime}</Col>
                         </Row>
                         
                    
                    </div>
                    <div className="controls space-x-10 p-2" id="controls" style={controlstyle}>
-                       <button id="skipperbtn" onClick={()=>skip(false)}><BiSkipPrevious size={40}/></button>
-                       <button onClick={()=>Setplaying(!playing)}>{!playing ? <BiPlay className="bg-green-700 rounded-xl border-2 border-black" size={40}/> : <BiPause className="bg-green-700 rounded-xl border-2 border-black" size={40}/>}</button>
+                       <button  id="skipperbtn" onClick={()=>skip(false)}><BiSkipPrevious size={40}/></button>
+                       <button className="outline-none" onClick={()=>Setplaying(!playing)}>{!playing ? <BiPlay className="bg-green-700 rounded-xl border-2 border-black" size={40}/> : <BiPause className="bg-green-700 rounded-xl border-2 border-black" size={40}/>}</button>
                        <button id="skipperbtn" onClick={()=>skip(true)}><BiSkipNext size={40}/></button>
                    </div>
                   
 
                 <div className="next-song" style={playerstyle}>
                     <h2 className="text-md" ><strong>Next up:</strong>{songs[nextsongindex].title}</h2>
+                </div>
+                <div className="trademark" style={playerstyle}>
+                    a deadshot production
                 </div>
                 
             </div> 
