@@ -59,8 +59,20 @@ const nextinedexing=(nextsongindex)=>{
     }
 }
 
-useEffect(()=>{
-    //progress work
+if(document.getElementById('progress_div'))
+{
+    //onlcick progressbar
+    document.getElementById('progress_div').addEventListener('click',(event)=>{
+    
+        const {duration}=audioEl.current
+       let move_progress=(event.offsetX / event.srcElement.clientWidth) * duration
+       audioEl.current.currentTime=move_progress
+       console.log('audioEl : ' + audioEl.current.currentTime+'move_progress :' + move_progress)
+    },{once:true})
+
+
+
+
     audioEl.current.addEventListener('timeupdate',(event)=>{
         //console.log(event)
         
@@ -95,6 +107,11 @@ useEffect(()=>{
         }
         
        }) 
+}
+
+useEffect(()=>{
+    //progress work
+    
   
 
     if(playing){
@@ -131,9 +148,8 @@ const minimize=()=>{
 
     Settitlestyle({
         position: 'relative',
-   'margin-top': '10px',
-   'top': '-200px',
-   'font-size':'small',
+      'top': '-210px',
+   'font-size':'15px',
     width: '350px'
     })
 
@@ -145,6 +161,7 @@ Setmain_player({
    Setminplayer(!minplayer)
 }
 const maximize=()=>{
+    
     Setplayerstyle({
         visibility:'visible'
     })
@@ -174,7 +191,8 @@ const maximize=()=>{
 
 
 const skip=(forwards=true)=>{
-
+    document.getElementById('progresses').style.width='0%'
+    audioEl.current.currentTime=0
      if(forwards){
         Setcurrentsongindex(()=>{
             Setinitialtime(0)
@@ -197,33 +215,12 @@ const skip=(forwards=true)=>{
              if(temp<0){
                  temp=songs.length-1
              }
-        
                 return temp
-         })
-         document.getElementById('progresses').style.width='0%'
-         audioEl.current.currentTime=0
+         })   
      }
-
-     
-    
-    
-     
-
      
 }
-    function setprogress()
-    {
-        if(document.getElementById('progress_div'))
-        {
-            document.getElementById('progress_div').addEventListener('click',(event)=>{
-                const {duration}=audioEl.current
-               let move_progress=(event.offsetX / event.srcElement.clientWidth) * duration
-               audioEl.current.currentTime=move_progress
-            })
-        }
-    }
-
-
+  
 return(
   
     <div className="main-player items-center" style={main_player}>
@@ -235,13 +232,13 @@ return(
                         </div>
                     <div className="player-heading" style={playerstyle}>
                         <audio id="audio" src={process.env.PUBLIC_URL+songs[currentsongindex].src}  ref={audioEl} preload="auto"/>                       
-                   <h1 className="font-extralight text-3xl"> PLAYING NOWs</h1>
+                   <h1 className="font-extralight text-3xl"> PLAYING NOW</h1>
                    </div>
                    <div className="detail-image" style={current} >
                    </div>
                    <center>
                    <div className="song-title" id="songtitle" style={titlestyle}>
-                         <h1 className=" font-bold">{songs[currentsongindex].title}</h1>
+                         <h1 className={minplayer==false ? "font-bold": null}>{songs[currentsongindex].title}</h1>
                     </div>
                     </center>
                     <div className="song-artist" style={playerstyle}>
@@ -251,7 +248,7 @@ return(
                    <Row>
                             <Col xs={2}>{initialtime}</Col>
                             <Col xs={8}>
-                                <div className="progress_div" id="progress_div" onClick={setprogress}>
+                                <div className="progress_div" id="progress_div" >
                                     <div className="progresses" id="progresses" > 
                                     </div>
 

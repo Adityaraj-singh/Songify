@@ -3,7 +3,7 @@ import {Container,ListGroup} from 'react-bootstrap'
 import './MyStyle.css';
 import {BsMusicNoteBeamed} from 'react-icons/bs'
 import {Nav,FormControl} from 'react-bootstrap'
-const Songlist=({songs,currentsongindex,Setcurrentsongindex,playing,Setplaying})=>{
+const Songlist=({songs,currentsongindex,Setcurrentsongindex,minplayer,playing,Setplaying})=>{
 
 const [posts,Setposts]=useState(null)
 const [people,Setpeople]=useState(50)
@@ -39,6 +39,12 @@ function filter(){
     
 }
 
+
+if(minplayer)
+{
+    
+   document.getElementById('listing').style.height="360px" 
+}
 function playall(){
     Setcurrentsongindex(0)
     Setplaying(true)
@@ -61,7 +67,7 @@ function playall(){
                  <div className="headerbutton">
                      <button className="bg-green-500 p-1 rounded-xl shadow-md border-2 border-black" id="playall" onClick={playall}>PLAY ALL</button>
                  </div>
-            <ol className=" listing py-4  space-y-1 " as="ol">
+            <ol className=" listing py-4  space-y-1 " id="listing" as="ol">
                 {
                     temp_songs.map(item=>(
                         <li className={currentsongindex==item.id ? "bg-green-600" : "bg-white"} id="listitem" key={item.id}>

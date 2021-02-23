@@ -20,10 +20,10 @@ function Home(){
         status:false
     },
     {    id:1,
-        title:'Back in black',
-        artist:'AC/DC',
-        photo:'/Media/Thumbnails/back_in_black.jfif',
-        src:'/Media/Back in Black.mp3',
+        title:'Perfect',
+        artist:'One Direction',
+        photo:'/Media/Thumbnails/perfect.jpg',
+        src:'/Media/Perfect.mp3',
         status:false
     },
     {    id:2,
@@ -55,10 +55,10 @@ function Home(){
         status:false
     },
     {    id:6,
-        title:'Animals(MAROONS 5)',
-        artist:'Maroons 5',
-        photo:'/Media/Thumbnails/animals.jpg',
-        src:'/Media/Animals.mp3',
+        title:'Something just like this',
+        artist:'The chainsmokers & Coldplay',
+        photo:'/Media/Thumbnails/something_just_like_this.jpg',
+        src:'/Media/Something just like this.m4a',
         status:false
     },
     {    id:7,
@@ -137,6 +137,7 @@ useEffect(()=>{
             songs={songs}
             currentsongindex={currentsongindex}
              Setcurrentsongindex={Setcurrentsongindex}
+             minplayer={minplayer}
              playing={playing}
              Setplaying={Setplaying} />
             
