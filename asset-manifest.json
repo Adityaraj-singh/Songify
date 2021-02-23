@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Songify/static/css/main.2b5b511d.chunk.css",
-    "main.js": "/Songify/static/js/main.834aa78c.chunk.js",
-    "main.js.map": "/Songify/static/js/main.834aa78c.chunk.js.map",
+    "main.js": "/Songify/static/js/main.76a79bcf.chunk.js",
+    "main.js.map": "/Songify/static/js/main.76a79bcf.chunk.js.map",
     "runtime-main.js": "/Songify/static/js/runtime-main.4250dc78.js",
     "runtime-main.js.map": "/Songify/static/js/runtime-main.4250dc78.js.map",
     "static/css/2.150d169a.chunk.css": "/Songify/static/css/2.150d169a.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.150d169a.chunk.css",
     "static/js/2.fbc666da.chunk.js",
     "static/css/main.2b5b511d.chunk.css",
-    "static/js/main.834aa78c.chunk.js"
+    "static/js/main.76a79bcf.chunk.js"
   ]
 }
