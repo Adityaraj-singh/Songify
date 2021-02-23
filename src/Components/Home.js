@@ -44,7 +44,7 @@ function Home(){
         title:'Call you mine ft Bebe Rexha',
         artist:'The Chainsmokers & Bebe Rexha',
         photo:'/Media/Thumbnails/call_you_mine.jpg',
-        src:'/Media/call you mine.m4a',
+        src:'/Media/Call you mine.m4a',
         status:false
     },
     {    id:5,
