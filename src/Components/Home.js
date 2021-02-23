@@ -30,7 +30,7 @@ function Home(){
         title:'Bad liar',
         artist:'Imagine Dragons',
         photo:'/Media/Thumbnails/bad_lair.jpg',
-        src:'/Media/Bad_Liar.mp3',
+        src:'/Media/Bad_liar.mp3',
         status:false
     },
     {    id:3,
