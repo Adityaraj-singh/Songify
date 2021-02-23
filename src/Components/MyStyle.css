@@ -1,18 +1,6 @@
-
 .home{
-    margin-bottom: 50px;
- 
    height: 600px;
- 
-   padding:20px;
- 
-}
 
-.app{
-   margin-bottom: 100px;
-   
-   padding-bottom: 200px;
-   padding-top: 50px;
 }
 .songpic{
 height: 100px;
@@ -35,9 +23,9 @@ width:auto;
 }
 
 .main-player{
-   margin-bottom: 40px;
+  
    position: relative;
-   top:40px;
+   top:-610px;
   
 }
 
@@ -46,14 +34,15 @@ width:auto;
    justify-content: left;
 }
 .songlistbox{
-   margin-bottom: 40px;
+   
   width: 350px;
   position: relative;
+  
   top: 40px;
 }
 .song-list-box{
    width: 450;
-   height: 500px;
+   height: 610px;
 
 }
 
@@ -64,7 +53,7 @@ width:auto;
 .listing{
   border-radius: 50px;
  
-   height: 430px;
+   height: 540px;
    overflow: scroll;
    overflow-x: hidden;
   position: relative;
@@ -76,4 +65,8 @@ width:auto;
    left: -150px;
    top:5px
 
+}
+.next-song{
+   position: relative;
+   top: 100px;
 }

@@ -15,11 +15,18 @@ var current={
 
 const temp_songs=songs
 
+const [main_player,Setmain_player]=useState({
+    position: 'relative',
+    top:'-590px'
+   
+})
+
 const [playerstyle,Setplayerstyle]=useState({
     visibility:'visible'
 })
 const [controlstyle,Setcontrolstyle]=useState({
-    position:'relative'
+    position:'relative',
+    top:'100px'
    
 })
 
@@ -30,9 +37,11 @@ const [titlestyle,Settitlestyle]=useState({
 })
 const [playergeometry,Setplayergeometry]=useState({
     width: '350px',
-    height: '500px'
+    height: '630px'
   
 })
+
+
 
 const audioEl=useRef(0)
 const [initialtime,Setinitialtime]=useState(0)
@@ -97,7 +106,9 @@ const minimize=()=>{
 
     Setplayergeometry({
         width: '350px',
-        height: '100px'
+        height: '100px',
+        
+       
     })
 
     Setcontrolstyle({
@@ -115,6 +126,12 @@ const minimize=()=>{
    'font-size':'small',
     width: '350px'
     })
+
+Setmain_player({
+    position:'relative',
+    top:'-60px'
+})
+
    Setminplayer(!minplayer)
 }
 const maximize=()=>{
@@ -126,7 +143,7 @@ const maximize=()=>{
 
     Setplayergeometry({
         width: '350px',
-        height: '500px'
+        height: '630px'
     })
 
     Setcontrolstyle({
@@ -137,8 +154,14 @@ const maximize=()=>{
     Settitlestyle({
         position: 'relative',
     })
+
+    Setmain_player({
+        position: 'relative',
+    top:'-590px'
+    })
     Setminplayer(!minplayer)
 }
+
 
 useEffect(()=>{
 
@@ -193,7 +216,7 @@ const skip=(forwards=true)=>{
 
 return(
   
-    <div className="main-player items-center">
+    <div className="main-player items-center" style={main_player}>
                              <center>
                                 
                     <div className="player-box   bg-gradient-to-r from-purple-600 via-purple-400 to-purple-400 rounded-2xl space-y-2 ring-4 ring-indigo-900 shadow-2xl" id="playerbox" style={playergeometry}>
@@ -204,7 +227,7 @@ return(
                         <audio id="audio" src={process.env.PUBLIC_URL+songs[currentsongindex].src}  ref={audioEl} preload="auto"/>                       
                    <h1 className="font-extralight text-3xl"> PLAYING NOW</h1>
                    </div>
-                   <div className="detail-image shadow-2xl border-3 ring-4 ring-opacity-70 ring-purple-400 " style={current} >
+                   <div className="detail-image shadow-2xl border-3 ring-4 ring-opacity-70 ring-purple-400" style={current} >
                    </div>
                    <center>
                    <div className="song-title" style={titlestyle}>
@@ -223,19 +246,17 @@ return(
                         
                    
                    </div>
-                   <div className="controls space-x-3 p-2" id="controls" style={controlstyle}>
-                       <button id="skipperbtn" onClick={()=>skip(false)}><BiSkipPrevious size={30}/></button>
-                       <button onClick={()=>Setplaying(!playing)}>{!playing ? <BiPlay className="bg-green-700 rounded-xl border-2 border-black" size={30}/> : <BiPause className="bg-green-700 rounded-xl border-2 border-black" size={30}/>}</button>
-                       <button id="skipperbtn" onClick={()=>skip(true)}><BiSkipNext size={30}/></button>
+                   <div className="controls space-x-10 p-2" id="controls" style={controlstyle}>
+                       <button id="skipperbtn" onClick={()=>skip(false)}><BiSkipPrevious size={40}/></button>
+                       <button onClick={()=>Setplaying(!playing)}>{!playing ? <BiPlay className="bg-green-700 rounded-xl border-2 border-black" size={40}/> : <BiPause className="bg-green-700 rounded-xl border-2 border-black" size={40}/>}</button>
+                       <button id="skipperbtn" onClick={()=>skip(true)}><BiSkipNext size={40}/></button>
                    </div>
                   
 
                 <div className="next-song" style={playerstyle}>
                     <h2 className="text-md" ><strong>Next up:</strong>{songs[nextsongindex].title}</h2>
                 </div>
-                <div className="trademark">
-                <p>a deadshot production</p>
-            </div>
+                
             </div> 
             
             </center>

@@ -117,18 +117,15 @@ useEffect(()=>{
     return(
         
             <center>
-           <div  className="home">
-            <Container>
-            <Row className="justify-content-md-center">
-            <Col  xs={{ order: 1 }} sm={3}  >
+           <div  className="home bg-red-400">
+            
+           
             <Songlist 
             songs={songs}
              Setcurrentsongindex={Setcurrentsongindex}
              playing={playing}
              Setplaying={Setplaying} />
-             </Col>
-             
-        <Col sm={4} >
+            
              {currentsongindex!=null ?
  <Player
  songs={songs}
@@ -143,9 +140,8 @@ useEffect(()=>{
    /> : null
              }
          
-            </Col>
-            </Row>
-            </Container>
+            
+            
         </div>
              
              </center>
