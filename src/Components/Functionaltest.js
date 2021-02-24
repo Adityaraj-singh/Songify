@@ -8,6 +8,7 @@ const Songlist=({songs,currentsongindex,Setcurrentsongindex,minplayer,playing,Se
 const [posts,Setposts]=useState(null)
 const [people,Setpeople]=useState(50)
 const [temp_songs,Settempsongs]=useState(songs)
+
 function change(e){
     Setcurrentsongindex(e)
 
@@ -25,9 +26,13 @@ axios
 */
 function filter(){
     const temp2=songs
-    
+ 
+   
+
     const newarray=temp2.filter((items)=>{
-        if((items.title.toLowerCase()).match(document.getElementById('searchinput').value)!==null)
+
+        console.log()
+        if(items.title.toLowerCase().includes(document.getElementById('searchinput').value)==true)
         {
             return true
         }
@@ -64,6 +69,7 @@ function playall(){
       onChange={filter}
     />
             </div>
+           
                  <div className="headerbutton">
                      <button className="bg-green-500 p-1 rounded-xl shadow-md border-2 border-black" id="playall" onClick={playall}>PLAY ALL</button>
                  </div>

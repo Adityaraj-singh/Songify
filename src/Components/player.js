@@ -17,7 +17,7 @@ const temp_songs=songs
 
 const [main_player,Setmain_player]=useState({
     position: 'relative',
-    top:'-500px' 
+    top:'-532px' 
 })
 
 const [playerstyle,Setplayerstyle]=useState({
@@ -184,7 +184,7 @@ const maximize=()=>{
 
     Setmain_player({
         position: 'relative',
-        top:'-500px'
+        top:'-532px'
     })
     Setminplayer(!minplayer)
 }

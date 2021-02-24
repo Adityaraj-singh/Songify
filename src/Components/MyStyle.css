@@ -1,5 +1,11 @@
+
+.app{
+   overflow-y: hidden;
+   overflow-x: hidden;
+}
 .home{
    height: 600px;
+   margin-bottom: 50px;
 
 }
 .songpic{
@@ -42,11 +48,11 @@ width:auto;
 
   width: 350px;
   position: relative;
-  top: 40px;
+  top: 7px;
 }
 .song-list-box{
    width: 450;
-   height: 540px;
+   min-height: 560px;
 }
 
 .home-title{
@@ -59,12 +65,33 @@ width:auto;
 }
 
 .listing{ 
-   height: 440px;
+   height: 455px;
    overflow: scroll;
    overflow-x: hidden;
   position: relative;
   top: 00px;
   margin-top: 5px;
+  margin-left:5px;
+  margin-right: 5px;
+}
+::-webkit-scrollbar{
+   width: 12px;
+}
+
+::-webkit-scrollbar-track{
+
+   border:7px solid rgb(109, 52, 143);
+   box-shadow: inset 0 0 2.5px rgba(0,0,0,0.5);
+   border-radius: 10px;
+}
+::-webkit-scrollbar-thumb{
+   background:linear-gradient(
+   45deg,
+green,
+  black
+   );
+   border-radius: 3px;
+
 }
 .top-controls{
    position: relative;
