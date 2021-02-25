@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/Songify/static/css/main.a697a343.chunk.css",
-    "main.js": "/Songify/static/js/main.d01f15be.chunk.js",
-    "main.js.map": "/Songify/static/js/main.d01f15be.chunk.js.map",
+    "main.css": "/Songify/static/css/main.6075d324.chunk.css",
+    "main.js": "/Songify/static/js/main.3dcc5466.chunk.js",
+    "main.js.map": "/Songify/static/js/main.3dcc5466.chunk.js.map",
     "runtime-main.js": "/Songify/static/js/runtime-main.4250dc78.js",
     "runtime-main.js.map": "/Songify/static/js/runtime-main.4250dc78.js.map",
     "static/css/2.150d169a.chunk.css": "/Songify/static/css/2.150d169a.chunk.css",
@@ -12,14 +12,14 @@
     "static/js/3.b648ed89.chunk.js.map": "/Songify/static/js/3.b648ed89.chunk.js.map",
     "index.html": "/Songify/index.html",
     "static/css/2.150d169a.chunk.css.map": "/Songify/static/css/2.150d169a.chunk.css.map",
-    "static/css/main.a697a343.chunk.css.map": "/Songify/static/css/main.a697a343.chunk.css.map",
+    "static/css/main.6075d324.chunk.css.map": "/Songify/static/css/main.6075d324.chunk.css.map",
     "static/js/2.fbc666da.chunk.js.LICENSE.txt": "/Songify/static/js/2.fbc666da.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.4250dc78.js",
     "static/css/2.150d169a.chunk.css",
     "static/js/2.fbc666da.chunk.js",
-    "static/css/main.a697a343.chunk.css",
-    "static/js/main.d01f15be.chunk.js"
+    "static/css/main.6075d324.chunk.css",
+    "static/js/main.3dcc5466.chunk.js"
   ]
 }
