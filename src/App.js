@@ -14,7 +14,11 @@ function App() {
  
 
     return (
+<<<<<<< HEAD
       <div className="app  bg-red-400">
+=======
+      <div className="app ">
+>>>>>>> c2d4ee6ca3fd4ae46446134dae99afc336eab554
      <Home/>
      </div>
     )
