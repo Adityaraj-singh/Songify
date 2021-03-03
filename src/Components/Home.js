@@ -16,81 +16,95 @@ function Home(){
         title:'Welcome to the party',
         artist:'Diplo,French Montana,Lil Pump,Zavia',
         photo:'/Media/Thumbnails/welcome_to_the_party.jpg',
-        src:'/Media/Welcome to the party.mp3'
+        src:'/Media/Welcome to the party.mp3',
+        Subtitles:'/Media/Subtitles/bad_liar.vtt',
+        status:false
     },
     {    id:1,
-        title:'Back in black',
-        artist:'AC/DC',
-        photo:'/Media/Thumbnails/back_in_black.jfif',
-        src:'/Media/Back in Black.mp3'
+        title:'Perfect',
+        artist:'One Direction',
+        photo:'/Media/Thumbnails/perfect.jpg',
+        src:'/Media/Perfect.mp3',
+        status:false
     },
     {    id:2,
         title:'Bad liar',
         artist:'Imagine Dragons',
         photo:'/Media/Thumbnails/bad_lair.jpg',
-        src:'/Media/Bad_liar.mp3'
+        src:'/Media/Bad_liar.mp3',
+        status:false
     },
     {    id:3,
         title:'Till i collapse(Eminem)',
         artist:'Eminem,Nate Dogg',
         photo:'/Media/Thumbnails/till_i_collapse.jpg',
-        src:'/Media/Till i collapse(Eminem).m4a'
+        src:'/Media/Till i collapse(Eminem).m4a',
+        status:false
     },
     {    id:4,
         title:'Call you mine ft Bebe Rexha',
         artist:'The Chainsmokers & Bebe Rexha',
         photo:'/Media/Thumbnails/call_you_mine.jpg',
-        src:'/Media/call you mine.m4a'
+        src:'/Media/Call you mine.m4a',
+        status:false
     },
     {    id:5,
         title:'Candy Paint',
         artist:'Post Malon',
         photo:'/Media/Thumbnails/candy_paint.jpg',
-        src:'/Media/Candy_Paint.mp3'
+        src:'/Media/Candy_Paint.mp3',
+        status:false
     },
     {    id:6,
-        title:'Animals(MAROONS 5)',
-        artist:'Maroons 5',
-        photo:'/Media/Thumbnails/animals.jpg',
-        src:'/Media/Animals.mp3'
+        title:'Something just like this',
+        artist:'The chainsmokers & Coldplay',
+        photo:'/Media/Thumbnails/something_just_like_this.jpg',
+        src:'/Media/Something just like this.m4a',
+        status:false
     },
     {    id:7,
         title:'Love me again',
         artist:'John Newman',
         photo:'/Media/Thumbnails/love_me_again.jpg',
-        src:'/Media/Love me again.mp3'
+        src:'/Media/Love me again.mp3',
+        status:false
     },
     {    id:8,
         title:'Rap God',
         artist:'Eminem(explicite)',
         photo:'/Media/Thumbnails/rap_god.jpg',
-        src:'/Media/rap god.mp3'
+        src:'/Media/rap god.mp3',
+        status:false
     },
     {    id:9,
-        title:'Shell Shocked(Teenage mutatnt ninja turtle)',
+        title:'Shell Shocked(Ninja turtle)',
         artist:'Juicy J, Wiz Khalifa, Ty Dolla $ign',
         photo:'/Media/Thumbnails/shell_shocked.jfif',
-        src:'/Media/Shell shocked(Teenaje mutant and ninja turtles).mp3'
+        src:'/Media/Shell shocked(Teenaje mutant and ninja turtles).mp3',
+        status:false
     },
     {    id:10,
         title:'Blinding light',
         artist:'The Weekends',
         photo:'/Media/Thumbnails/blinding_lights.jpg',
-        src:'/Media/Blinding lights.m4a'
+        src:'/Media/Blinding lights.m4a',
+        status:false
     },
     {
         id:11,
         title:'Killing Strangers(John wick)',
         artist:'Marilyn Manson',
         photo:'/Media/Thumbnails/John_Wick.jpg',
-        src:'/Media/Killing Strangers.mp3'  
+        src:'/Media/Killing Strangers.mp3',
+        status:false  
     },
     {
         id:12,
         title:'Unforgettable',
         artist:'french montana ft. swae lee',
         photo:'/Media/Thumbnails/unforgettable.png',
-        src:'/Media/Unforgettable.mp3'  
+        src:'/Media/Unforgettable.mp3',
+        status:false
     }
     
 ]
@@ -117,12 +131,14 @@ useEffect(()=>{
     return(
         
             <center>
-           <div  className="home bg-red-400">
+           <div  className="home">
             
            
             <Songlist 
             songs={songs}
+            currentsongindex={currentsongindex}
              Setcurrentsongindex={Setcurrentsongindex}
+             minplayer={minplayer}
              playing={playing}
              Setplaying={Setplaying} />
             
