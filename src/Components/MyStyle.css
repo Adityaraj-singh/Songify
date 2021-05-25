@@ -1,0 +1,379 @@
+
+
+.app{
+   overflow-y: hidden;
+   overflow-x: hidden;
+}
+.home{
+   height: 600px;
+   margin-bottom: 50px;
+
+}
+.songpic{
+height: 100px;
+width:auto;
+}
+.mycart{
+   margin-top: 200px;
+}
+.player-heading{
+   margin-bottom: 30px;
+}
+.song-artist{
+   position: relative;
+   top: 5px;
+  
+}
+
+.headerbutton{
+   position: relative;
+   top: 10px;
+}
+
+
+
+.main-player{
+  
+   position: relative;
+   top:-610px;
+  
+}
+
+
+.minimize{
+   justify-content: left;
+}
+.songlistbox{
+
+  width: 350px;
+  position: relative;
+  top: 7px;
+}
+
+.song-title{
+   font-family: 'Shadows Into Light', cursive;
+}
+.home-title{
+   margin-bottom: 20px;
+}
+
+.playingicon{
+   position: relative;
+   top: 1px;
+}
+
+
+::-webkit-scrollbar{
+   width: 12px;
+}
+
+::-webkit-scrollbar-track{
+
+   border:7px solid rgb(109, 52, 143);
+   box-shadow: inset 0 0 2.5px rgba(0,0,0,0.5);
+   border-radius: 10px;
+}
+::-webkit-scrollbar-thumb{
+   background:linear-gradient(
+   45deg,
+green,
+  black
+   );
+   border-radius: 3px;
+
+}
+.top-controls{
+   position: relative;
+   width:10%;
+   left: -150px;
+   top:5px;
+   z-index: 10;
+   
+
+}
+#next-song{
+   position: relative;
+   font-weight: bolder;
+   top: 20px;
+   width:100%; 
+   border-radius:50px;
+
+   
+}
+
+#listitem{
+   min-height:70px;
+     
+   box-shadow: black 2px 5px 10px;
+   width: 300px;
+   margin-bottom: 10px;
+   font-family: 'Shadows Into Light', cursive;
+   border-radius: 7px;
+}
+
+
+#playing-icon{
+   position: relative;
+   right: 130px;
+   top: 30px;
+}
+
+.progress_div{
+
+   width:100%;
+   height: 0.5rem;
+   box-shadow: 0 1px 2px rgba(0, 0,0, 0.7),0 2px 4px rgba(0, 0,0, 0.7);
+   background-color:rgb(226, 230, 220);
+   border-radius: 4rem;
+   position: relative;
+   margin-top: 0.4rem;
+   /*
+   transition: all 1s linear;
+   -moz-transition: all 1s linear;
+   -o-transition: all 1s linear;
+   -webkit-transition: all 1s linear;
+   */
+   cursor: pointer;
+   -webkit-appearance: none;
+   appearance: none;
+}
+
+.progresses{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 0;
+   height: 100%;
+   background-color: black;
+  border-top-left-radius: 4 rem;
+
+  /*
+   transition: width 0s linear;
+   -moz-transition: width 0s linear;
+   -o-transition: width 0s linear;
+   -webkit-transition: width 0s linear;
+   */
+   cursor: pointer;
+   -webkit-appearance: none;
+   appearance: none;
+
+}
+
+
+
+.trademark{
+   position: relative;
+   top: 30px;
+}
+
+#playall{
+   box-shadow: 2px 2px 8px black;
+}
+
+#lyrics{
+   height: 30px;
+}
+
+
+
+
+
+.app{
+   overflow-y: hidden;
+   overflow-x: hidden;
+}
+.home{
+   height: 600px;
+   margin-bottom: 50px;
+
+}
+.songpic{
+height: 100px;
+width:auto;
+}
+.mycart{
+   margin-top: 200px;
+}
+.player-heading{
+   margin-bottom: 30px;
+}
+.song-artist{
+   position: relative;
+   top: 5px;
+}
+.detail-image{ 
+   position: relative;
+   border: 2px solid #4c2283;
+   top: 0px;
+   width: 180px;
+   height: 180px;
+   border-radius: 100px;
+   background-repeat: no-repeat;
+   object-fit:cover;
+   background-size:100% 100%;
+   margin-bottom: 50px;
+    box-shadow:7px 7px 14px #6d489e,
+    -7px -7px 24px #d58cff;
+}
+
+.main-player{
+  
+   position: relative;
+   top:-610px;
+  
+}
+
+
+.minimize{
+   justify-content: left;
+}
+.songlistbox{
+
+  width: 350px;
+  position: relative;
+  top: 7px;
+}
+.song-list-box{
+   width: 450;
+   min-height: 560px;
+   background: #8a50d4;
+   border-radius: 10px;
+}
+
+.home-title{
+   margin-bottom: 20px;
+}
+
+.playingicon{
+   position: relative;
+   top: 1px;
+}
+
+.listing{ 
+   height: 500px;
+
+   overflow: scroll;
+   overflow-x: hidden;
+  position: relative;
+  top: 00px;
+  margin-top: 5px;
+  margin-left:5px;
+  margin-right: 5px;
+}
+::-webkit-scrollbar{
+   width: 12px;
+}
+
+::-webkit-scrollbar-track{
+
+   border:7px solid rgb(109, 52, 143);
+   box-shadow: inset 0 0 2.5px rgba(0,0,0,0.5);
+   border-radius: 10px;
+}
+::-webkit-scrollbar-thumb{
+   background:linear-gradient(
+   45deg,
+green,
+  black
+   );
+   border-radius: 3px;
+
+}
+
+.next-song{
+   position: relative;
+   top: 50px;
+}
+
+#listitem{
+   min-height:70px;
+     
+   box-shadow: black 2px 5px 10px;
+   width: 300px;
+   margin-bottom: 10px;
+   
+   border-radius: 7px;
+}
+
+
+#playing-icon{
+   position: relative;
+   right: 130px;
+   top: 30px;
+}
+.progress-bars{
+   width:95%
+}
+.progress_div{
+
+   width:100%;
+   height: 0.5rem;
+   box-shadow: 0 1px 2px rgba(0, 0,0, 0.7),0 2px 4px rgba(0, 0,0, 0.7);
+   background-color:rgb(226, 230, 220);
+   border-radius: 4rem;
+   position: relative;
+   margin-top: 0.4rem;
+  
+   cursor: pointer;
+   -webkit-appearance: none;
+   appearance: none;
+}
+
+.progresses{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 0;
+   height: 100%;
+   background-color:rgb(13, 112, 13);
+  border-top-left-radius: 4 rem;
+   /*
+  
+   transition: width 0s linear;
+   -moz-transition: width 0s linear;
+   -o-transition: width 0s linear;
+   -webkit-transition: width 0s linear;
+   */
+   cursor: pointer;
+   -webkit-appearance: none;
+   appearance: none;
+
+}
+
+.trademark{
+   position: relative;
+   top: 40px;
+   font-style: italic; 
+   text-decoration:underline;
+}  
+
+#playall{
+   box-shadow: 2px 2px 8px black;
+}
+
+
+
+#play-icon{
+   background-color:whitesmoke;
+   box-shadow:7px 7px 24px #6d489e,
+             -7px -7px 24px #d58cff;
+         
+             
+}
+
+#skipperbtn-1{
+   position: relative;
+   bottom: 0px;
+  
+}
+#skipperbtn-2{
+   position: relative;
+   bottom: 0px;
+  
+}
+.player-box{
+   background-color:#A16AE8;
+   border-radius: 10px;
+
+  
+}
