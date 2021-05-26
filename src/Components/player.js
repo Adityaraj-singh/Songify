@@ -4,6 +4,7 @@ import {Nav,Form,Row,Col} from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BiSkipPrevious,BiPlay,BiSkipNext,BiPause } from 'react-icons/bi';
 import {AiOutlineShrink} from 'react-icons/ai'
+
 import {FiMaximize2} from 'react-icons/fi'
 import axios from 'axios'
 import {Container,ProgressBar} from 'react-bootstrap'

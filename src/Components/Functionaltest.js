@@ -3,6 +3,7 @@ import {Container,ListGroup} from 'react-bootstrap'
 import './MyStyle.css';
 import {BsMusicNoteBeamed} from 'react-icons/bs'
 import {Nav,FormControl} from 'react-bootstrap'
+import {BsPlay} from 'react-icons/bs'
 const Songlist=({songs,currentsongindex,Setcurrentsongindex,minplayer,playing,Setplaying})=>{
 
 const [posts,Setposts]=useState(null)
@@ -65,7 +66,7 @@ function playall(){
             
            
                  <div className="headerbutton">
-                     <button className="bg-green-500 p-1 rounded-xl shadow-md border-2 border-black" id="playall" onClick={playall}>PLAY ALL</button>
+                     <button className="bg-green-500 p-1 rounded-xl shadow-md border-2 border-black" id="playall" onClick={playall}>PLAY ALL<BsPlay size={25} className="playallicon"/></button>
                  </div>
             <ol className=" listing py-4  space-y-1 " id="listing" as="ol">
                 {

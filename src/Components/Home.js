@@ -64,7 +64,7 @@ function Home(){
         title:'Chammak Challo',
         artist:'Akon,Hamsika Iyer',
         photo:'/Media/Thumbnails/chammak_challo.jpg',
-        src:'/Media/chammak_challo.mp3',
+        src:'/Media/Chammak_challo.mp3',
         Subtitles:'/Media/Subtitles/bad_liar.vtt',
         status:false
     },
