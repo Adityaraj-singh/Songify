@@ -19,10 +19,47 @@ width:auto;
 }
 .player-heading{
    margin-bottom: 30px;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+}
+
+#speaker-button{
+   position: relative;
+   top: 8px;
+   left:4px;
+   bottom:auto;
+  
+   height:20px;
+   width: 20px;
+}
+#speaker-button:focus{
+   outline: purple;
+}
+.speaker-icon{
+   position: relative;
+   height: 100%;
+   width: 100%;
+   
+  
+   color: black;
+   background-color: whitesmoke;
+   border-radius: 100%;
+}
+.muted-button{
+   position: relative;
+  
+   
+  
+   color: rgb(182, 39, 39);
+   background-color: whitesmoke;
+   border-radius: 100%;
 }
 .song-artist{
    position: relative;
    top: 5px;
+   font-size: 14px;
+   color: rgb(51, 58, 58);
   
 }
 
@@ -50,7 +87,9 @@ width:auto;
   position: relative;
   top: 7px;
 }
-
+.shrink-expand:focus{
+outline: none;
+}
 
 .home-title{
    margin-bottom: 20px;
@@ -81,6 +120,19 @@ green,
    border-radius: 3px;
 
 }
+
+.song-button:focus{
+   outline: none;
+}
+
+.song-button{
+   width: 100%;
+   height: 100%;
+   
+ 
+}
+
+
 .top-controls{
    position: relative;
    width:10%;
@@ -90,15 +142,19 @@ green,
    
 
 }
-#next-song{
+.next-song{
    position: relative;
-   font-weight: bolder;
    top: 20px;
-   width:100%; 
-   border-radius:50px;
-
+   width: 90%;
+   color: rgb(55, 58, 55);
+   overflow: hidden;
    
+   white-space: nowrap;
+   font-weight: bold;
+   text-overflow: ellipsis;
+ 
 }
+
 
 #listitem{
    min-height:70px;
@@ -111,6 +167,7 @@ green,
 }
 
 
+
 #playing-icon{
    position: relative;
    right: 130px;
@@ -120,12 +177,14 @@ green,
 .progress_div{
 
    width:100%;
-   height: 0.5rem;
-   box-shadow: 0 1px 2px rgba(0, 0,0, 0.7),0 2px 4px rgba(0, 0,0, 0.7);
+   height: 0.4rem;
+   box-shadow: 0 1px 3px rgba(0, 0,0, 0.7),0 3px 6px rgba(0, 0,0, 0.7);
    background-color:rgb(226, 230, 220);
-   border-radius: 4rem;
+   
    position: relative;
    margin-top: 0.4rem;
+   border-radius: 5px;
+   
    /*
    transition: all 1s linear;
    -moz-transition: all 1s linear;
@@ -143,10 +202,10 @@ green,
    left: 0;
    width: 0;
    height: 100%;
-   background-color: black;
-  border-top-left-radius: 4 rem;
-
-  /*
+   background-color:black;
+  border-radius: 4rem;
+   /*
+  
    transition: width 0s linear;
    -moz-transition: width 0s linear;
    -o-transition: width 0s linear;
@@ -157,6 +216,7 @@ green,
    appearance: none;
 
 }
+
 
 
 
@@ -203,9 +263,13 @@ width:auto;
    position: relative;
    top: 5px;
 }
+
+.song-title{
+   color: rgb(51, 58, 58);
+}
 .detail-image{ 
    position: relative;
-   border: 2px solid #4c2283;
+   border: 2px solid whitesmoke;
    top: 0px;
    width: 180px;
    height: 180px;
@@ -242,14 +306,14 @@ width:auto;
    border-radius: 10px;
 }
 
-.home-title{
-   margin-bottom: 20px;
-}
+
 
 .playingicon{
    position: relative;
    top: 1px;
 }
+
+
 
 .listing{ 
    height: 500px;
@@ -282,10 +346,7 @@ green,
 
 }
 
-.next-song{
-   position: relative;
-   top: 50px;
-}
+
 
 #listitem{
    min-height:70px;
@@ -306,41 +367,7 @@ green,
 .progress-bars{
    width:95%
 }
-.progress_div{
 
-   width:100%;
-   height: 0.5rem;
-   box-shadow: 0 1px 2px rgba(0, 0,0, 0.7),0 2px 4px rgba(0, 0,0, 0.7);
-   background-color:rgb(226, 230, 220);
-   border-radius: 4rem;
-   position: relative;
-   margin-top: 0.4rem;
-  
-   cursor: pointer;
-   -webkit-appearance: none;
-   appearance: none;
-}
-
-.progresses{
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 0;
-   height: 100%;
-   background-color:rgb(13, 112, 13);
-  border-top-left-radius: 4 rem;
-   /*
-  
-   transition: width 0s linear;
-   -moz-transition: width 0s linear;
-   -o-transition: width 0s linear;
-   -webkit-transition: width 0s linear;
-   */
-   cursor: pointer;
-   -webkit-appearance: none;
-   appearance: none;
-
-}
 
 .trademark{
    position: relative;
@@ -371,6 +398,15 @@ green,
 #skipperbtn-2{
    position: relative;
    bottom: 0px;
+  
+}
+
+#skipperbtn-1:focus{
+   outline: none;
+  
+}
+#skipperbtn-2:focus{
+   outline: none;
   
 }
 .player-box{

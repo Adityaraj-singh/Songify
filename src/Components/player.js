@@ -4,7 +4,8 @@ import {Nav,Form,Row,Col} from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BiSkipPrevious,BiPlay,BiSkipNext,BiPause } from 'react-icons/bi';
 import {AiOutlineShrink} from 'react-icons/ai'
-
+import {GiSpeaker} from 'react-icons/gi'
+import {GiSpeakerOff} from 'react-icons/gi'
 import {FiMaximize2} from 'react-icons/fi'
 import axios from 'axios'
 import {Container,ProgressBar} from 'react-bootstrap'
@@ -43,7 +44,9 @@ const [controlstyle,Setcontrolstyle]=useState({
 const [titlestyle,Settitlestyle]=useState({
     position: 'relative',
     top:'5px',
-    'font-style':'xx-large'
+    'font-size':'20px',
+   
+   
 })
 const [playergeometry,Setplayergeometry]=useState({
     width: '350px',
@@ -66,6 +69,8 @@ const [subindex,Setsubindex]=useState(0)
 const [subsintime,Setsubsintime]=useState('')
 const [subsouttime,Setsubsouttime]=useState('')
 const [seconds,Setseconds]=useState(0)
+
+const [sound,Setsound]=useState(true)
 function timerchange(){
     Setinitialtime(initialtime+1)
 }
@@ -107,6 +112,8 @@ if(document.getElementById('progress_div'))
         
     audioEl.current.addEventListener('timeupdate',(event)=>{
     
+
+        
         const {currentTime,duration}=event.srcElement
         //total duration
         var progress_time=(currentTime/duration) * 100
@@ -286,11 +293,12 @@ const minimize=()=>{
     
 
     document.getElementById('progress_div').style.left='10px'
-    document.getElementById('progress_div').style.top='-200px'
+    document.getElementById('progress_div').style.top='-194px'
     document.getElementById('progress_div').style.position='relative'
-    document.getElementById('progress_div').style.height='0.14rem'
+    document.getElementById('progress_div').style.height='0.2rem'
 
-    
+    document.getElementById('speaker-button') .style.left="50px"
+    document.getElementById('speaker-button') .style.top="-15px"   
   
 
     Setshowing('hidden')
@@ -344,6 +352,9 @@ const maximize=()=>{
     document.getElementById('playerbox').style.borderRadius = "10px"
     document.getElementById('skipperbtn-1').style.bottom = "0px"
     document.getElementById('skipperbtn-2').style.bottom = "0px"
+
+    document.getElementById('speaker-button') .style.top="8px"   
+    document.getElementById('speaker-button') .style.left="4px"  
     Setplayerstyle({
         visibility:'visible'
     })
@@ -368,6 +379,8 @@ const maximize=()=>{
 
     Settitlestyle({
         position: 'relative',
+        'font-size':'20px',
+        
     })
 
     Setmain_player({
@@ -408,6 +421,13 @@ const skip=(forwards=true)=>{
      } 
  
 }
+
+
+function sound_change(){
+
+    audioEl.current.muted=!audioEl.current.muted
+    Setsound(!sound)
+}
 return(
   
     <div className="main-player items-center" style={main_player}>
@@ -417,11 +437,12 @@ return(
                         <div className="top-controls p-1">
                         {!minplayer ? <button onClick={minimize}><AiOutlineShrink size={20}/></button> : <button  onClick={maximize} ><FiMaximize2 size={20} /></button> }
                         </div>
-                    <div className="player-heading" style={playerstyle}>
+                    <div className="player-heading" >
                         <audio id="audio"  src={process.env.PUBLIC_URL+songs[currentsongindex].src}  ref={audioEl} preload="auto">
                             <track default src={process.env.PUBLIC_URL+'/Media/Subtitles/bad_liar.vtt'}></track>
                             </audio>                       
-                   <h2 className="font-extralight text-3xl "><strong>Playing now</strong></h2>
+                   <h2 className="font-extralight text-2xl " style={playerstyle}><strong>Playing now  </strong></h2>
+                 {sound ? <button id="speaker-button" onClick={sound_change}> <GiSpeaker className="speaker-icon" id="speaker-icon" size={20}/></button> :<button id="speaker-button"><GiSpeakerOff  className="muted-button" id="muted-button" size={20} onClick={sound_change}/></button>  } 
                    </div>
                    <div className="detail-image" id="detail-image" style={current} >
                    </div>
@@ -431,7 +452,7 @@ return(
                     </div>
                     </center>
                     <div className="song-artist" style={playerstyle}>
-                        <h4 className="font-bold text-xs" id="artist-text">{songs[currentsongindex].artist}</h4>
+                        <h4 className="font-bold " id="artist-text">{songs[currentsongindex].artist}</h4>
                     </div>
                    <div className="progress-bars p-1" >
                    <Row>
@@ -458,9 +479,9 @@ return(
                       
                    </div>
                     
-               
-                    <h2 className="text-sm next-song" id="next-song" ><strong>Next up: </strong>{songs[nextsongindex].title} [<span className="text-xs">{songs[nextsongindex].artist}</span>]</h2>
-                
+                   
+                    <p className="next-song" id="next-song" ><strong>Next up: </strong>{songs[nextsongindex].title} [{songs[nextsongindex].artist}]</p>
+                 
                 <div className="trademark" style={playerstyle}>
                     <p className="text-xs font-mono"><i>a deadshot production</i></p>
                 </div>

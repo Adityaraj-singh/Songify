@@ -12,7 +12,7 @@ const [temp_songs,Settempsongs]=useState(songs)
 
 function change(e){
     Setcurrentsongindex(e)
-
+    
     Setplaying(true)
 } 
 
@@ -73,7 +73,7 @@ function playall(){
                     temp_songs.map(item=>(
                         <li className={currentsongindex==item.id ? "bg-green-600" : "bg-white"} id="listitem" key={item.id}>
                             <div  id="playing-icon">{currentsongindex==item.id ? <BsMusicNoteBeamed />:null}</div>
-                        <button className=" rounded-2xl space-y-1" key={item.id}   onClick={()=>change(item.id)}>          
+                        <button className="song-button rounded-2xl space-y-1" key={item.id}   onClick={()=>change(item.id)}>          
                         <p ><strong>{item.title}</strong> </p>
                         
                         <div className="align-item-start">{item.artist}</div>
