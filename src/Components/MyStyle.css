@@ -128,6 +128,12 @@ green,
 .song-button{
    width: 100%;
    height: 100%;
+text-align: left;
+padding-left: 15px;
+font-size: 14px;
+top: 5px;
+position: relative;
+font-weight: bold;
    
  
 }
@@ -313,11 +319,26 @@ width:auto;
    top: 1px;
 }
 
+.image-thumb{
+   height: 40px;
+
+
+   width: 40px;
+   border-radius: 20%;
+   margin-top: 10px;
+   margin-left: 5px;
+   -o-box-shadow:      3px 3px 2.5px black;
+-icab-box-shadow:   3px 3px 2.5px black;
+-khtml-box-shadow:  3px 3px 2.5px black;
+-moz-box-shadow:    3px 3px 2.5px black;
+-webkit-box-shadow: 3px 3px 2.5px black;
+box-shadow:         3px 3px 2.5px black;
+}
 
 
 .listing{ 
    height: 500px;
-
+   
    overflow: scroll;
    overflow-x: hidden;
   position: relative;
@@ -350,7 +371,9 @@ green,
 
 #listitem{
    min-height:70px;
-     
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
    box-shadow: black 2px 5px 10px;
    width: 300px;
    margin-bottom: 10px;
@@ -361,8 +384,9 @@ green,
 
 #playing-icon{
    position: relative;
-   right: 130px;
-   top: 30px;
+   right: 10px;
+   top: 20px;
+   color: blue;
 }
 .progress-bars{
    width:95%

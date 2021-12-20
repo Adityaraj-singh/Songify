@@ -72,12 +72,17 @@ function playall(){
                 {
                     temp_songs.map(item=>(
                         <li className={currentsongindex==item.id ? "bg-green-600" : "bg-white"} id="listitem" key={item.id}>
-                            <div  id="playing-icon">{currentsongindex==item.id ? <BsMusicNoteBeamed />:null}</div>
+                            
+
+                                <img src ={process.env.PUBLIC_URL+item.photo} className="shadow-2x image-thumb" id="image-thumb" />
+                            
                         <button className="song-button rounded-2xl space-y-1" key={item.id}   onClick={()=>change(item.id)}>          
                         <p ><strong>{item.title}</strong> </p>
                         
-                        <div className="align-item-start">{item.artist}</div>
+                        <div className="align-item-start song-list-artist">{item.artist}</div>
+                        
                     </button>
+                    <div  id="playing-icon">{currentsongindex==item.id ? <BsMusicNoteBeamed />:null}</div>
                     </li>
                     ))
                 }
